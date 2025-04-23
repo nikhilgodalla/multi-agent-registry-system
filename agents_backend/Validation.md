@@ -13,11 +13,9 @@ DETACH DELETE n;
 
 ### Test Sequence 1: New Agent Creation
 
-```python
-import requests
-
+```
 # First Request - Should create a new agent
-payload1 = {
+{
     "parent_id": "parent_A",
     "problem_statement": "Create a data analysis report for Q1 2024 sales performance"
 }
@@ -25,9 +23,9 @@ payload1 = {
 
 ### Test Sequence 2: Similar Problem (Should Reuse Agent)
 
-```python
+```
 # Second Request - Similar problem, should reuse the first agent
-payload2 = {
+{
     "parent_id": "parent_B",
     "problem_statement": "Analyze Q1 2024 sales performance and create report"
 }
@@ -35,7 +33,7 @@ payload2 = {
 
 ### Test Sequence 3: Different Domain - New Agent
 
-```json
+```
 {
   "parent_id": "parent_data_1",
   "problem_statement": "Analyze customer behavior patterns in e-commerce data"
@@ -44,7 +42,7 @@ payload2 = {
 
 ### Test Sequence 4: Similar Domain (Reuse Agent from Test 3)
 
-```json
+```
 {
   "parent_id": "parent_data_2",
   "problem_statement": "Study e-commerce customer behavior and shopping patterns"
